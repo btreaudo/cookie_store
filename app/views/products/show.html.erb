@@ -7,12 +7,12 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
+  <%= @product.category.name %>
 </p>
 
 <p>
   <strong>Brand:</strong>
-  <%= @product.brand %>
+  <%= @product.brand.name %>
 </p>
 
 <p>
@@ -22,13 +22,15 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <%= number_to_currency @product.price %>
 </p>
 
 <p>
   <strong>Quantity:</strong>
   <%= @product.quantity %>
 </p>
+
+<%= image_tag @product.image.url(:medium) %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

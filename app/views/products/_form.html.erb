@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
+    <%= f.collection_select :category_id, Category.order(:name).all, :id, :name %><br>
   </div>
   <div class="field">
-    <%= f.label :brand_id %><br>
-    <%= f.text_field :brand_id %>
+    <%= f.label :brand_id %>
+    <%= f.collection_select :brand_id, Brand.order(:name).all, :id, :name %><br>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -37,5 +37,10 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+
+<div class="field">
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
   </div>
 <% end %>
