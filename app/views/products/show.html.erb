@@ -7,12 +7,12 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category.name %>
+  <%= @product.try(:category).try(:name) %>
 </p>
 
 <p>
   <strong>Brand:</strong>
-  <%= @product.brand.name %>
+  <%= @product.try(:brand).try(:name) %>
 </p>
 
 <p>
