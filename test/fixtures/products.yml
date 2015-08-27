@@ -2,16 +2,16 @@
 
 one:
   name: 4runner
-  category_id:
-  brand_id:
+  category_id: 1
+  brand_id: 2
   description: MyText
   price: 9.99
   quantity: 1
 
 two:
   name: continental
-  category_id:
-  brand_id:
+  category_id: 1
+  brand_id: 2
   description: MyText
   price: 9.99
   quantity: 1
